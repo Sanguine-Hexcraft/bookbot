@@ -1,3 +1,4 @@
+import sys
 from stats import get_num_words, get_num_characters, sort_the_dic
 
 # Function that opens the file path to the books and returns it to main().
@@ -9,7 +10,9 @@ def get_book_text(filepath):
 
 def main():
     # Set the path to our book(s).
-    books_path = "books/frankenstein.txt"
+    if len(sys.argv) < 2:
+        sys.exit(1)
+    books_path = sys.argv[1]
     # Create a new variable by calling the function get_book_text with the path to book.
     book_words = get_book_text(books_path)
     # Create a new variable by returning a value from the function in stats.py to count the number of words in the book.
