@@ -33,10 +33,10 @@ def main():
     sorted_characters = get_num_characters(book_words)
     # -------
     # Create a variable to store a list of sorted (high to low) 
-    # of small dictionaries using the key/value pair of "char": char and "num": count.
+    # small dictionaries using the key/value pair of "char": char and "num": count.
     # So we can print them in a nice format in the console
     printable_char_list = sort_the_dic(sorted_characters)
-    # loop through or new sorted list of small dics and just create a 
+    # loop through our new sorted list of small dics and just create a 
     # string with the string of char and int of num
     for k in printable_char_list:
         ch = k["char"]
