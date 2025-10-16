@@ -9,9 +9,12 @@ def get_book_text(filepath):
 
 
 def main():
-    # Set the path to our book(s).
+    # Check if the command line argument has 2 values (e.g. main.py <path to book)
+    # If the command line argument is missing the second argument, print how to use the command and exit the function.
     if len(sys.argv) < 2:
+        print("Usage: python3 main.py <path_to_book>")
         sys.exit(1)
+    # Set the path to our book(s) using sys.argv.
     books_path = sys.argv[1]
     # Create a new variable by calling the function get_book_text with the path to book.
     book_words = get_book_text(books_path)
